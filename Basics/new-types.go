@@ -1,15 +1,15 @@
 package main
 
-import(
+import (
 	"fmt"
 	"strings"
 )
 
-type checkList []string
+type CheckList []string
 
-func main(){
+func main() {
 
-	list := make(checkList, 6)
+	list := make(CheckList, 6)
 	list[0] = "Task1 - Trivial"
 	list[1] = "Task2 - Important"
 	list[2] = "Task3 - Normal"
@@ -23,15 +23,15 @@ func main(){
 
 }
 
-func (list checkList) Sort() ([]string, []string, []string){
+func (list CheckList) Sort() ([]string, []string, []string) {
 	var trivialTasks, normalTasks, importantTasks []string
 
 	for _, e := range list {
-		if strings.Contains(e, "Trivial"){
+		if strings.Contains(e, "Trivial") {
 			trivialTasks = append(trivialTasks, e)
-		} else if strings.Contains(e, "Normal"){
+		} else if strings.Contains(e, "Normal") {
 			normalTasks = append(normalTasks, e)
-		} else if strings.Contains(e, "Important"){
+		} else if strings.Contains(e, "Important") {
 			importantTasks = append(importantTasks, e)
 		}
 	}
